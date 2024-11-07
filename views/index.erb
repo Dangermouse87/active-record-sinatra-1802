@@ -1,0 +1,23 @@
+<%# Embedded ruby that is displayed ( pe + tab) %>
+<%# Embedded ruby that is not displayed ( er + tab) %>
+<div class="container">
+  <div class="row">
+    <%# Iterate over the @pokemon defined in the app.rb file %>
+    <% @pokemon.each do |pokemon| %>
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-3">
+        <div class="card bg-white">
+          <%# Interpolate each individual pokemons image to display it inside an <img> tag %>
+          <img src="<%= pokemon.image_url %>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <%# display the name %>
+            <h5 class="card-title"><%= pokemon.name %></h5>
+            <%# display the type %>
+            <p class="card-text"><%= pokemon.poke_type %></p>
+            <%# interpolate the id in an a href tag, in order to send it as a param. ie id = 10, /10. We access this using params[:id] inside the app.rb file %>
+            <a href="/<%= pokemon.id %>" class="btn btn-primary">More details</a>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

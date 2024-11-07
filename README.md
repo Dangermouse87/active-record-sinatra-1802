@@ -45,7 +45,35 @@
 
 ### Plan:
 
-- ✅ Rehearse OOP before/after ActiveRecord
+- 🔲 Rehearse OOP before/after ActiveRecord
 - 🔲 As a user I can list all the pokemons
 - 🔲 As a user I can see one pokemon's details
-- 🔲 As a user I can add a pokemon
+
+
+### Steps
+
+1 - Create Database
+2 - Create Migration with a timestamp
+3 - Create Table with desired attributes
+4 - Add migration
+5 - Create the model
+6 - Seed the database with instances of Pokemon from an api
+7 - configure the sinatra views for the list of Pokemon
+8 - display the pokemon in the views.
+
+*** Extra ***
+
+9 - configure sinatra to display details of individual pokemon
+10 - display the individual details on a different page
+
+### Use
+
+You guys are free to clone this repo and play around with it to get a further idea.
+
+Just remember to: 
+
+bundle install
+rake db:drop
+rake db:create
+rake db:migrate
+rake db:seed

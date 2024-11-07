@@ -1,0 +1,15 @@
+<%# Embedded ruby that is displayed ( pe + tab) %>
+<%# Embedded ruby that is not displayed ( er + tab) %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-3">
+      <div class="card bg-white">
+        <img src="<%= @pokemon.image_url %>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= @pokemon.name %></h5>
+          <p class="card-text"><%= @pokemon.poke_type %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
