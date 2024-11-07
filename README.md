@@ -1,5 +1,51 @@
 ## Active Record Sinatra boilerplate
 
-Boilerplate for the 03-AR-Database/03-ActiveRecord-Basics/01_sinatra_activerecord livecode.
+###Before (OOP app)
 
-Please refer to the livecode guidelines to use it.
+```
+         ___________________________________________________________
+        |                                                          |
+        |   3.App                  )\._.,--...,'``.                |
+        |                        /,   _.. \   _\  (`._ ,.          |
+        |                       `._.-(,_..'--(,_..'`-.;.'          |
+        |                        |    4.Router    |                |
+        |                        |________________|                |
+        |                                |                         |
+        |                         _______\/_______                 |
+        |     _________          |                |                |
+        |    | 1.Model |         |  5.Controller  |                |
+        |    |_________|         |________________|                |
+        |            \             /            \                  |
+        |             \___________\/_        ___\/______________   |
+ ___    |             |              |      |                   |  |
+|CSV|<--------------->| 2.Repository |      | 6.View(puts,gets) |  |
+'---'   |             |______________|      |___________________|  |
+        |__________________________________________________________|
+```
+
+###Now (ActiveRecord x Sinatra)
+
+```
+               ________________________________________________________
+              |   Sinatra             )\._.,--...,'``.                |
+              |   1. bundle install /,   _.. \   _\  (`._ ,.          |
+              |                    `._.-(,_..'--(,_..'`-.;.'          |
+              |                        |  6. app.rb =   |             |                      
+              |                        |    Router +    |             |                      
+              |                        |   Controller   |             |
+              |                        |________________|             |
+ ________     |                        /            \                 |
+|DB:     |    |            ___________\/_        ___\/______________  |
+|2. crea |    |           |              |      |                   | |
+|3. migr |<-------------->|   5.Model    |      | 7. View(html.erb) | |
+|        |    |           |______________|      |___________________| |
+|4. seed |    |_______________________________________________________|
+'--------' 
+```
+
+### Plan:
+
+- ✅ Rehearse OOP before/after ActiveRecord
+- 🔲 As a user I can list all the pokemons
+- 🔲 As a user I can see one pokemon's details
+- 🔲 As a user I can add a pokemon
